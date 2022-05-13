@@ -12,22 +12,27 @@ export class SelectLevelPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    /* this.levels temporarily here . when webservice is available then get it from there*/
     this.levels = [
       {
         title: 'Kan-anan',
+        color: 'green',
         logos: [
           {
-            title: '10 Dove Street',
-            img: '1kananan/10dc.png'
+            name: '10 Dove Street',
+            img: '1kananan/10dc.png',
+            description: 'test'
           },
           {
-            title: 'Samyupsalamat',
-            img: '1kananan/samyupsalamat.jpg'
+            name: 'Samyupsalamat',
+            img: '1kananan/samyupsalamat.jpg',
+            description: 'test'
           },
         ]
       },
       {
-        title: 'Skwelahan'
+        title: 'Skwelahan',
+        color: 'peach',
       }
     ];
   }

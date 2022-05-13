@@ -7,29 +7,11 @@
 <ion-content>
   <ion-list>
     <!-- if dynamic-->
-    <!-- <ion-item lines="none" *ngFor="let level of levels">
+    <ion-item lines="none" *ngFor="let level of levels">
       <div class="center-button">
-        <ion-button>
-          <ion-text>{{ level.title }}</ion-text>
-        </ion-button>
-      </div>
-    </ion-item> -->
-    <!-- if dynamic end-->
-    <ion-item>
-      <div class="center-button">
-        <ion-button color="green">
+        <ion-button color="{{level.color}}">
           <ion-text>
-            <h3>Kan-anan</h3>
-            <p>15/15 100%</p>
-          </ion-text>
-        </ion-button>
-      </div>
-    </ion-item>
-    <ion-item>
-      <div class="center-button">
-        <ion-button color="peach">
-          <ion-text>
-            <h3>Skwelahan</h3>
+            <h3>{{ level.title }}</h3>
             <p>15/15 100%</p>
           </ion-text>
         </ion-button>
