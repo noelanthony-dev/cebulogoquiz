@@ -1,0 +1,78 @@
+ion-header{
+  background-color: #AA9183;
+  text-align: center;
+  min-height: 64px; // increase height of top bar
+  padding-top: 6px; // so text will be centered
+  ion-toolbar {
+    color: white;
+    --background: #AA9183;
+  }
+}
+
+.center-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+ion-button {
+  padding-top: 12px;
+  width: 48em;
+  height: 8em;
+}
+
+.ion-color-green {
+  --ion-color-base: var(--ion-color-green);
+  --ion-color-base-rgb: var(--ion-color-green-rgb);
+  --ion-color-contrast-rgb: var(--ion-color-green-contrast-rgb);
+  --ion-color-shade: var(--ion-color-green-shade);
+  --ion-color-tint: var(--ion-color-green-tint);
+}
+
+.ion-color-lightgreen {
+	--ion-color-base: var(--ion-color-lightgreen);
+	--ion-color-base-rgb: var(--ion-color-lightgreen-rgb);
+	// --ion-color-contrast: var(--ion-color-lightgreen-contrast); // comment so that text will be white
+	--ion-color-contrast-rgb: var(--ion-color-lightgreen-contrast-rgb);
+	--ion-color-shade: var(--ion-color-lightgreen-shade);
+	--ion-color-tint: var(--ion-color-lightgreen-tint);
+}
+
+.ion-color-brown {
+	--ion-color-base: var(--ion-color-brown);
+	--ion-color-base-rgb: var(--ion-color-brown-rgb);
+	// --ion-color-contrast: var(--ion-color-brown-contrast); // comment so that text will be white
+	--ion-color-contrast-rgb: var(--ion-color-brown-contrast-rgb);
+	--ion-color-shade: var(--ion-color-brown-shade);
+	--ion-color-tint: var(--ion-color-brown-tint);
+}
+
+.ion-color-nude {
+	--ion-color-base: var(--ion-color-nude);
+	--ion-color-base-rgb: var(--ion-color-nude-rgb);
+	// --ion-color-contrast: var(--ion-color-nude-contrast); // comment so that text will be white
+	--ion-color-contrast-rgb: var(--ion-color-nude-contrast-rgb);
+	--ion-color-shade: var(--ion-color-nude-shade);
+	--ion-color-tint: var(--ion-color-nude-tint);
+}
+
+.ion-color-peach {
+	--ion-color-base: var(--ion-color-peach);
+	--ion-color-base-rgb: var(--ion-color-peach-rgb);
+	// --ion-color-contrast: var(--ion-color-peach-contrast);  // comment so that text will be white
+	--ion-color-contrast-rgb: var(--ion-color-peach-contrast-rgb);
+	--ion-color-shade: var(--ion-color-peach-shade);
+	--ion-color-tint: var(--ion-color-peach-tint);
+}
+
+.ion-color-flesh {
+	--ion-color-base: var(--ion-color-flesh);
+	--ion-color-base-rgb: var(--ion-color-flesh-rgb);
+	// --ion-color-contrast: var(--ion-color-flesh-contrast); // comment so that text will be white
+	--ion-color-contrast-rgb: var(--ion-color-flesh-contrast-rgb);
+	--ion-color-shade: var(--ion-color-flesh-shade);
+	--ion-color-tint: var(--ion-color-flesh-tint);
+}
