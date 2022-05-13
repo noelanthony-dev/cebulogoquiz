@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'select-level',
+    loadChildren: () => import('./select-level/select-level.module').then( m => m.SelectLevelPageModule)
+  },
 ];
 
 @NgModule({

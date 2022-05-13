@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border"> <!-- ion-no-border to remove shadow-->
+  <ion-toolbar>
+    <ion-title>Select level</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- if dynamic-->
+    <ion-item lines="none" *ngFor="let level of levels">
+      <div class="center-button">
+        <ion-button color="{{level.color}}">
+          <ion-text>
+            <h3>{{ level.title }}</h3>
+            <p>15/15 100%</p>
+          </ion-text>
+        </ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
