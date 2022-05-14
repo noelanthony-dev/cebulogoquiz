@@ -15,22 +15,12 @@ export class SelectLevelPage implements OnInit {
     /* this.levels temporarily here . when webservice is available then get it from there*/
     this.levels = [
       {
+        id: 1,
         title: 'Kan-anan',
         color: 'green',
-        logos: [
-          {
-            name: '10 Dove Street',
-            img: '1kananan/10dc.png',
-            description: 'test'
-          },
-          {
-            name: 'Samyupsalamat',
-            img: '1kananan/samyupsalamat.jpg',
-            description: 'test'
-          },
-        ]
       },
       {
+        id: 2,
         title: 'Skwelahan',
         color: 'peach',
       }

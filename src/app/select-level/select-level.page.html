@@ -9,7 +9,7 @@
     <!-- if dynamic-->
     <ion-item lines="none" *ngFor="let level of levels">
       <div class="center-button">
-        <ion-button color="{{level.color}}">
+        <ion-button color="{{level.color}}" [routerLink]="['/level']" [queryParams]="{level: level.id}">
           <ion-text>
             <h3>{{ level.title }}</h3>
             <p>15/15 100%</p>
