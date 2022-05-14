@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'level',
     loadChildren: () => import('./level/level.module').then( m => m.LevelPageModule)
+  },  {
+    path: 'logo',
+    loadChildren: () => import('./logo/logo.module').then( m => m.LogoPageModule)
   },
+
 
 ];
 

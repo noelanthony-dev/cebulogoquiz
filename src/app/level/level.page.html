@@ -9,17 +9,35 @@
 
 <ion-content>
   <ion-grid>
+    <!-- first row -->
     <ion-row *ngIf="logoSet.logo[0]" class="ion-justify-content-center">
+
       <ion-col size="3" class="ion-margin">
-        <ion-img [src]="logoSet.logo[0].img" ></ion-img>
+        <ion-img
+          [src]="logoSet.logo[0].img"
+          [routerLink]="['/logo']"
+          [queryParams]="{name: logoSet.logo[0].name, img: logoSet.logo[0].img, description: logoSet.logo[0].description}"
+          >
+        </ion-img>
       </ion-col>
 
       <ion-col size="3" class="ion-margin">
-        <ion-img [src]="logoSet.logo[1].img" ></ion-img>
+
+        <ion-img
+          [src]="logoSet.logo[1].img"
+          [routerLink]="['/logo']"
+          [queryParams]="{name: logoSet.logo[1].name, img: logoSet.logo[1].img, description: logoSet.logo[1].description}"
+          >
+        </ion-img>
       </ion-col>
 
       <ion-col size="3" class="ion-margin">
-        <ion-img [src]="logoSet.logo[2].img" ></ion-img>
+        <ion-img
+          [src]="logoSet.logo[2].img"
+          [routerLink]="['/logo']"
+          [queryParams]="{name: logoSet.logo[2].name, img: logoSet.logo[2].img, description: logoSet.logo[2].description}"
+          >
+        </ion-img>
       </ion-col>
     </ion-row>
 
