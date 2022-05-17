@@ -3,5 +3,6 @@ export class Logo {
     public answers: string[],
     public img: string,
     public description: string,
+    public socmed: string[],
   ) {}
 }

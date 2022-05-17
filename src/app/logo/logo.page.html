@@ -8,20 +8,60 @@
 </ion-header>
 
 <ion-content *ngIf="logo">
-  <ion-img [src]="logo.img" class="ion-margin"></ion-img>
+    <ion-img [src]="logo.img" class="ion-margin"></ion-img>
 
-  <ion-input
-    *ngIf="!status"
-    type="text"
-    inputmode="text"
-    autofocus="true"
-    clearInput="true"
-    placeholder="Input answer here"
-    [(ngModel)]="input"
-    (ionChange)="onChangeInput()"
-    >
-  </ion-input>
-  <ion-text class="ion-margin" *ngIf="status === true">
-    <h1>You got it!</h1>
+    <ion-input
+      *ngIf="!status"
+      type="text"
+      inputmode="text"
+      autofocus="true"
+      clearInput="true"
+      placeholder="Input answer here"
+      [(ngModel)]="input"
+      (ionChange)="onChangeInput()"
+      >
+    </ion-input>
+
+  <ion-text *ngIf="status === true">
+    <h1 class="ion-text-center">{{ logo.answers[0] }}</h1>
+    <p class="ion-margin">{{ logo.description }}</p>
+    <p class="ion-margin">Follow their social media pages:</p>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="3" *ngIf="logo.socmed[0] && logo.socmed[0] !== ''">
+          <ion-chip outline color="primary" (click)="goToUrl(0)" >
+          <ion-icon name="desktop-outline"></ion-icon>
+          <ion-label>Website</ion-label>
+        </ion-chip></ion-col>
+        <ion-col size="3" *ngIf="logo.socmed[1] && logo.socmed[1] !== ''">
+          <ion-chip color="primary" (click)="goToUrl(1)" >
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-label>Facebook</ion-label>
+        </ion-chip>
+        </ion-col>
+        <ion-col size="3" *ngIf="logo.socmed[2] && logo.socmed[2] !== ''">
+          <ion-chip outline color="tertiary" (click)="goToUrl(2)">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-label>Instagram</ion-label>
+        </ion-chip>
+        </ion-col>
+        <ion-col size="3" *ngIf="logo.socmed[3] && logo.socmed[3] !== ''">
+          <ion-chip outline color="secondary" (click)="goToUrl(2)">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-label>Twitter</ion-label>
+        </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-text>
+
+  <!-- <ion-card *ngIf="status === true">
+    <ion-img [src]="logo.img" class="ion-margin"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ logo.answers[0] }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ logo.description }}
+    </ion-card-content>
+  </ion-card> -->
 </ion-content>
