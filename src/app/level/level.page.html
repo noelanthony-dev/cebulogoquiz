@@ -12,8 +12,8 @@
     <ion-row class="ion-justify-content-center" >
       <ion-col size="3" class="ion-margin" *ngFor="let logo of logoSet.logo; let i = index">
         <ion-img
-          [src]="logoSet.logo[i].img"
-          [routerLink]="['/', 'logo', logo.id]"
+          [src]="logo.img"
+          [routerLink]="['/', 'logo', logoSet.logosId, i]"
           >
         </ion-img>
       </ion-col>

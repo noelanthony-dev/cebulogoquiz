@@ -29,8 +29,6 @@ export class LevelPage implements OnInit {
         if (res) {
         this.logoSet = res[0];
         this.logoSet = this.logoSet.find(i => i.logosId === this.levelId);
-        console.log('logoset', this.logoSet);
-        console.log('logoset', typeof this.logoSet);
       }
     });
   }

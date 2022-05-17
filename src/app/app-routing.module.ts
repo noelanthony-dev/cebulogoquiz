@@ -28,7 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./logo/logo.module').then( m => m.LogoPageModule)
   },
   {
-    path: 'logo/:id',
+    path: 'logo/:levelId/:logoId',
     loadChildren: () => import('./logo/logo.module').then( m => m.LogoPageModule)
   },
 

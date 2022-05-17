@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="logo">
   <ion-img [src]="logo.img" class="ion-margin"></ion-img>
 
   <ion-input
