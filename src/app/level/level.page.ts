@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-level',
@@ -9,53 +10,29 @@ import { ActivatedRoute } from '@angular/router';
 export class LevelPage implements OnInit {
 
   logoSet: any;
+  levelId: number;
 
   constructor(
+    private storage: StorageService,
     private route: ActivatedRoute,
-  ) { }
+  ) {}
 
   ngOnInit() {
-    const logos = [
-      {
-      logosId: 1,
-      title: 'Kan-anan',
-      logo: [
-        {
-          name: '10 Dove Street',
-          img: 'assets/images/1kananan/10dc.png',
-          description: 'test'
-        },
-        {
-          name: 'Samyupsalamat',
-          img: 'assets/images/1kananan/samyupsalamat.jpg',
-          description: 'test'
-        },
-        {
-          name: 'Sols',
-          img: 'assets/images/1kananan/sols.jpg',
-          description: 'test'
-        },
-      ]
-      },
-      {
-        logosId: 2,
-        title: 'Skwelahan',
-        logo: [
-        {
-          name: 'USC',
-          img: 'assets/images/1kananan/10dc.png',
-          description: 'test2'
-        },
-        {
-          name: 'CIC',
-          img: 'assets/images/1kananan/samyupsalamat.jpg',
-          description: 'test2'
-        },
-      ]
+    this.levelId = +this.route.snapshot.paramMap.get('id');
+    this.loadData();
+  }
+
+  /** loadData */
+  /** loads data from IndexedDB */
+   loadData() {
+     this.storage.getData('logos').subscribe(res => {
+        if (res) {
+        this.logoSet = res[0];
+        this.logoSet = this.logoSet.find(i => i.logosId === this.levelId);
+        console.log('logoset', this.logoSet);
+        console.log('logoset', typeof this.logoSet);
       }
-    ];
-    const levelId = this.route.snapshot.queryParamMap.get('level');
-    this.logoSet = logos.find(i => i.logosId === +levelId); // put + so that levelId turns into number
+    });
   }
 
 }

@@ -1,6 +1,6 @@
 export class Logo {
   constructor(
-    public name: string,
+    public answers: string[],
     public img: string,
     public description: string,
   ) {}

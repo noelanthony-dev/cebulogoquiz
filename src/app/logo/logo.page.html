@@ -9,12 +9,19 @@
 
 <ion-content>
   <ion-img [src]="logo.img" class="ion-margin"></ion-img>
+
   <ion-input
+    *ngIf="!status"
     type="text"
     inputmode="text"
     autofocus="true"
     clearInput="true"
     placeholder="Input answer here"
+    [(ngModel)]="input"
+    (ionChange)="onChangeInput()"
     >
   </ion-input>
+  <ion-text class="ion-margin" *ngIf="status === true">
+    <h1>You got it!</h1>
+  </ion-text>
 </ion-content>

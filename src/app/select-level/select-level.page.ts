@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-select-level',
@@ -7,24 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectLevelPage implements OnInit {
 
-  levels: Array<any>;
+  levels: any;
 
-  constructor() { }
+  constructor(private storage: StorageService) {
+    this.loadData();
+   }
 
-  ngOnInit() {
-    /* this.levels temporarily here . when webservice is available then get it from there*/
-    this.levels = [
-      {
-        id: 1,
-        title: 'Kan-anan',
-        color: 'green',
-      },
-      {
-        id: 2,
-        title: 'Skwelahan',
-        color: 'peach',
+  ngOnInit() {}
+
+  /** loadData */
+  /** loads data from IndexedDB */
+  async loadData() {
+    await this.storage.getData('levels').subscribe(res => {
+        if (res) {
+        this.levels = res[0];
+        console.log(this.levels);
       }
-    ];
+    });
   }
-
 }
