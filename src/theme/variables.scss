@@ -3,7 +3,8 @@
 
 /** Ionic CSS Variables **/
 :root {
-  /* custom colors */
+  /* custom font */
+  --ion-font-family: 'OpenSans';
   /* button colors */
   --ion-color-green: #7b876d;
   --ion-color-green-rgb: 123,135,109;
@@ -277,4 +278,9 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/OpenSans.ttf");
 }

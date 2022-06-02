@@ -24,9 +24,9 @@
 
   <ion-text *ngIf="status === true">
     <h1 class="ion-text-center">{{ logo.answers[0] }}</h1>
-    <p class="ion-margin">{{ logo.description }}</p>
-    <p class="ion-margin">Follow their social media pages:</p>
-    <ion-grid fixed>
+    <p class="ion-margin description">{{ logo.description }}</p>
+    <p class="ion-margin socialmedia" *ngIf="logo.socmed">Follow their social media pages:</p>
+    <ion-grid fixed class="socialmedia" *ngIf="logo.socmed">
       <ion-row>
         <ion-col size="3" *ngIf="logo.socmed[0] && logo.socmed[0] !== ''">
           <ion-chip outline color="primary" (click)="goToUrl(0)" >

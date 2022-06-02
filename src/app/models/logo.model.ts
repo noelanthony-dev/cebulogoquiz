@@ -4,5 +4,6 @@ export class Logo {
     public img: string,
     public description: string,
     public socmed: string[],
+    public status: boolean,
   ) {}
 }

@@ -39,4 +39,17 @@ export class StorageService {
      storedData.splice(index, 1);
      return this.storage.set(key, storedData);
    }
+
+   async updateProgress(levelId, logoId) {
+    const progress = await this.storage.get('progress') || [];
+    if (!progress || progress.length === 0) {
+      return null;
+    }
+    progress[0][levelId-1][logoId].status = true;
+    console.log('levelid', levelId);
+    console.log('logoId', logoId);
+    console.log('progress', progress);
+
+    return this.storage.set('progress', progress);
+   }
 }
