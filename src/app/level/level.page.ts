@@ -11,6 +11,7 @@ export class LevelPage implements OnInit {
 
   logoSet: any;
   levelId: number;
+  progress: any;
 
   constructor(
     private storage: StorageService,
@@ -19,18 +20,34 @@ export class LevelPage implements OnInit {
 
   ngOnInit() {
     this.levelId = +this.route.snapshot.paramMap.get('id');
-    this.loadData();
+    this.loadLogosData();
+    console.log('levelId', this.levelId);
   }
 
-  /** loadData */
-  /** loads data from IndexedDB */
-   loadData() {
+  /** loadLogosData */
+  /** loads logo data from IndexedDB */
+   loadLogosData() {
      this.storage.getData('logos').subscribe(res => {
         if (res) {
         this.logoSet = res[0];
         this.logoSet = this.logoSet.find(i => i.logosId === this.levelId);
+        console.log('logoset', this.logoSet);
       }
     });
   }
 
+  /** loadProgressData */
+  /** loads progress data from IndexedDB */
+  loadProgressData() {
+    this.storage.getData('progress').subscribe(res => {
+      if (res) {
+        this.progress = res[0];
+        console.log('prores', this.progress);
+      }
+    });
+  }
+
+  ionViewWillEnter() {
+    this.loadProgressData();
+  }
 }

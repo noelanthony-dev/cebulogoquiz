@@ -11,11 +11,14 @@
   <ion-grid *ngIf="logoSet">
     <ion-row class="ion-justify-content-center" >
       <ion-col size="3" class="ion-margin" *ngFor="let logo of logoSet.logo; let i = index">
-        <ion-img
-          [src]="logo.img"
-          [routerLink]="['/', 'logo', logoSet.logosId, i]"
+        <div [ngClass]="{'reduced-opacity': progress[levelId-1][i].status}"> <!-- CONTINUE HERE, DYNAMICALLY SET IMAGE TO OPAQUE IF STATUE = TRUE -->
+          <ion-img
+            [src]="logo.img"
+            [routerLink]="['/', 'logo', logoSet.logosId, i]"
           >
-        </ion-img>
+          </ion-img>
+          <ion-icon *ngIf="progress && progress[levelId-1][i].status" name="checkmark-circle" class="overlay"></ion-icon>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
