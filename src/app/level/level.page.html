@@ -11,7 +11,7 @@
   <ion-grid *ngIf="logoSet">
     <ion-row class="ion-justify-content-center" >
       <ion-col size="3" class="ion-margin" *ngFor="let logo of logoSet.logo; let i = index">
-        <div [ngClass]="{'reduced-opacity': progress[levelId-1][i].status}"> <!-- CONTINUE HERE, DYNAMICALLY SET IMAGE TO OPAQUE IF STATUE = TRUE -->
+        <div [ngClass]="{'reduced-opacity': progress[levelId-1][i].status}">
           <ion-img
             [src]="logo.img"
             [routerLink]="['/', 'logo', logoSet.logosId, i]"

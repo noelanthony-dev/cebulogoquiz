@@ -7,12 +7,12 @@
 <ion-content>
   <ion-list>
     <!-- if dynamic-->
-    <ion-item lines="none" *ngFor="let level of levels">
+    <ion-item lines="none" *ngFor="let level of levels; let i = index">
       <div class="center-button">
         <ion-button color="{{level.color}}" [routerLink]="['/','level', level.id]">
           <ion-text>
             <h3>{{ level.title }}</h3>
-            <p>15/15 100%</p>
+            <p> {{ levelProgress(i) }}/{{ progress[i].length }} 100%</p> <!-- CONTINUE HERE, maybe use method to display level progres?? HMm-->
           </ion-text>
         </ion-button>
       </div>

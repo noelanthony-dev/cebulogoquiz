@@ -12,6 +12,7 @@ export class LevelPage implements OnInit {
   logoSet: any;
   levelId: number;
   progress: any;
+  completedLogosProgress: any;
 
   constructor(
     private storage: StorageService,

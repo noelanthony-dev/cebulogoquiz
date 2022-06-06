@@ -9,6 +9,7 @@ import { StorageService } from '../services/storage.service';
 export class SelectLevelPage implements OnInit {
 
   levels: any;
+  progress: any;
 
   constructor(private storage: StorageService) {
     this.loadData();
@@ -25,5 +26,33 @@ export class SelectLevelPage implements OnInit {
         console.log(this.levels);
       }
     });
+  }
+
+  /** loadProgressData */
+  /** loads progress data from IndexedDB */
+  loadProgressData() {
+    this.storage.getData('progress').subscribe(res => {
+      if (res) {
+        this.progress = res[0];
+        console.log('prores', this.progress);
+      }
+    });
+  }
+
+  /* levelProgress(i) */
+  /* accepts the index of level as parameter */
+  /* returns the number of completed levels for the level */
+  levelProgress(i) {
+    let counter = 0;
+    this.progress[i].forEach(element => {
+      if (element.status) {
+        counter++;
+      }
+    });
+    return counter;
+  }
+
+  ionViewWillEnter() {
+    this.loadProgressData();
   }
 }
