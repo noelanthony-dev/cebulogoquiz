@@ -14,7 +14,9 @@ export class SelectLevelPage implements OnInit {
 
   constructor(private storage: StorageService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadProgressData();
+  }
 
   /** loadData */
   /** loads data from IndexedDB */
@@ -22,8 +24,6 @@ export class SelectLevelPage implements OnInit {
     await this.storage.getData('levels').subscribe(res => {
         if (res) {
         this.levels = res[0];
-        console.log('levels', this.levels);
-        console.log('levels', typeof this.levels);
       }
     });
   }
@@ -41,15 +41,13 @@ export class SelectLevelPage implements OnInit {
   /* levelProgress(i) */
   /* accepts the index of level as parameter */
   /* returns the number of completed levels for the level */
-  levelProgress(i) {
+  levelProgress(index: number): number {
     let counter = 0;
-    if (typeof this.progress !== 'undefined' && typeof this.progress[i] !== 'undefined') {
-      this.progress[i].forEach(element => {
-        if (element.status) {
-          counter++;
-        }
-      });
-    }
+    this.progress[index].forEach(element => {
+      if (element.status) {
+        counter++;
+      }
+    });
     return counter;
   }
 
@@ -59,28 +57,19 @@ export class SelectLevelPage implements OnInit {
     this.loadProgressData();
   }
 
+  /* percentageProgress(a , b) */
+  /* converts number of completed logos and total logos to percentage */
+  percentageProgress(index: number): number{
+    return this.levelProgress(index) / this.progress[index].length * 100;
+  }
+
+  totalLevels(index: number): number {
+    return this.progress[index].length;
+  }
+
   /* helper class */
   /* used to supress console error */
   typeOf(value) {
     return typeof value;
-  }
-
-  /* percentageProgress(a , b) */
-  /* converts number of completed logos and total logos to percentage */
-  percentageProgress(index: number): number{
-    let returnValue = 0;
-    if (typeof this.progress !== 'undefined' && typeof this.progress[index] !== 'undefined') {
-      returnValue = this.levelProgress(index) / this.progress[index].length * 100;
-    }
-    return returnValue;
-  }
-
-  totalLevels(index: number): number {
-    let returnValue = 0;
-    console.log('this.progress', this.progress);
-    if (typeof this.progress !== 'undefined' && typeof this.progress[index] !== 'undefined') {
-      returnValue = this.progress[index].length;
-    }
-    return returnValue;
   }
 }

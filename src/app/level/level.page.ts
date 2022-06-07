@@ -21,6 +21,7 @@ export class LevelPage implements OnInit {
 
   ngOnInit() {
     this.levelId = +this.route.snapshot.paramMap.get('id');
+    this.loadProgressData();
     this.loadLogosData();
   }
 
@@ -47,11 +48,5 @@ export class LevelPage implements OnInit {
 
   ionViewWillEnter() {
     this.loadProgressData();
-  }
-
-  /* helper class */
-  /* used to supress console error */
-  typeOf(value) {
-    return typeof value;
   }
 }

@@ -8,15 +8,12 @@
   <ion-list>
     <!-- if dynamic-->
     <ion-item lines="none" *ngFor="let level of levels; let i = index">
-      <div class="center-button">
+      <div class="center-button" *ngIf="typeOf(progress) !== 'undefined' && typeOf(progress[i]) !== 'undefined'">
         <ion-button color="{{level.color}}" [routerLink]="['/','level', level.id]">
           <ion-text>
             <h3>{{ level.title }}</h3>
             <p>
-              {{ levelProgress(i) }}
-              /
-              {{ totalLevels(i) }}
-              {{percentageProgress(i)}}%
+              {{ levelProgress(i) }}/{{ totalLevels(i) }} {{percentageProgress(i)}}%
             </p>
           </ion-text>
         </ion-button>
