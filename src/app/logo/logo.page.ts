@@ -28,14 +28,10 @@ export class LogoPage implements OnInit {
     this.logoId = +this.route.snapshot.paramMap.get('logoId');
     this.getProgressStatus();
     this.loadLogos();
-    console.log('status', this.status);
-    console.log('logo', this.logo);
   }
 
   async getProgressStatus() {
     await this.storage.getData('progress').subscribe(res => {
-      console.log('levelid', this.levelId);
-      console.log('logoid', this.logoId);
       this.status = res[0][this.levelId-1][this.logoId].status;
     });
   }
@@ -59,6 +55,7 @@ export class LogoPage implements OnInit {
     this.storage.getData('logos').subscribe(res => {
       if (res) {
       this.logo = res[0].find(i => i.logosId === this.levelId).logo[this.logoId];
+      console.log('logo',this.logo)
     }
     });
   }

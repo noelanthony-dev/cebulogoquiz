@@ -12,7 +12,12 @@
         <ion-button color="{{level.color}}" [routerLink]="['/','level', level.id]">
           <ion-text>
             <h3>{{ level.title }}</h3>
-            <p> {{ levelProgress(i) }}/{{ progress[i].length }} 100%</p> <!-- CONTINUE HERE, maybe use method to display level progres?? HMm-->
+            <p>
+              {{ levelProgress(i) }}
+              /
+              {{ totalLevels(i) }}
+              {{percentageProgress(i)}}%
+            </p>
           </ion-text>
         </ion-button>
       </div>

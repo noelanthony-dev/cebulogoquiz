@@ -46,9 +46,6 @@ export class StorageService {
       return null;
     }
     progress[0][levelId-1][logoId].status = true;
-    console.log('levelid', levelId);
-    console.log('logoId', logoId);
-    console.log('progress', progress);
 
     return this.storage.set('progress', progress);
    }

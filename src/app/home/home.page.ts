@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { StorageService } from '../services/storage.service';
 
 @Component({
@@ -8,7 +10,6 @@ import { StorageService } from '../services/storage.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
   levels = [
     {
       id: 1,
@@ -19,18 +20,32 @@ export class HomePage {
       id: 2,
       title: 'Skwelahan',
       color: 'peach'
+    },
+    {
+      id: 3,
+      title: 'Tara Bukid!',
+      color: 'peach'
     }
   ];
 
   progress =
   [
     [
-      { status: false }, // dove
-      { status: false }, // sols
-      { status: false }, // fatdoi
-      { status: false }, // cooee
-      { status: false }, // tamp
-      { status: false }, // tagala
+      { status: false }, // 1 10 dove
+      { status: false }, // 2 sol
+      { status: false }, // 3 fatdoi
+      { status: false }, // 4 coe
+      { status: false }, // 5 tamp
+      { status: false }, // 6 tagala
+      { status: false }, // 7 orange
+      { status: false }, // 8 Wingers
+      { status: false }, // 9 Ricos
+      { status: false }, // 10 persian
+      { status: false }, // 11 choobi
+      { status: false }, // 12 kuyaj
+      { status: false }, // 12 ila
+      { status: false }, // 13 sprokceteer
+      { status: false }, // 13 uss
     ],
     [
       { status: false }, // usc
@@ -72,17 +87,74 @@ export class HomePage {
       {
         answers: ['Cooee'],
         img: 'assets/images/1kananan/coe.jpg',
-        description: 'cooee desc',
+        description: 'Your favorite everyday bake, brew, blend and juice ritual • We are open daily from 8AM to 10PM',
+        socmed: ['', 'https://www.facebook.com/cooeeph/', 'https://www.instagram.com/cooeeph/?hl=en'],
       },
       {
         answers: ['Tamp Cafe & Co.', 'Tamp', 'Tazza'],
         img: 'assets/images/1kananan/tamp.png',
-        description: 'Tamp Cafe & Co',
+        description: 'Offering unique flavors and dishes inspired by worldly eats, TAMP Cafe & Co. invites everyone to dive into a new gastronomic adventure, bringing in excitement to familiar flavors, comfort food, specialty coffee and delectable cakes & pastries.',
+        socmed: ['', 'https://www.facebook.com/tampcafecebu/', 'https://www.instagram.com/tampcafecebu/?hl=en'],
       },
       {
         answers: ['Tagala Chicken Butterfly', 'Tagala'],
         img: 'assets/images/1kananan/tag.jpg',
         description: 'tagala chicken butterlfy',
+        socmed: ['', 'https://www.facebook.com/tagalachicken/'],
+      },
+      {
+        answers: ['Orange Brutus'],
+        img: 'assets/images/1kananan/orangeb.jpg',
+        description: 'Home of the best SIZZLING BURGER STEAK and FRESH FRUIT SHAKES!. A desire to make a statement in the food industry of Cebu, Philippines prompted two young entrepreneurs to start ORANGE BRUTUS in 1980.These entrepreneurs ventured into the FIRST HAMBURGER CHAIN in Cebu with the vision to revolutionize the food retail industry in the Visayas. This was a very bold step since hamburger was a relatively new food offered to the Filipinos at that time. ',
+        socmed: ['https://orangebrutus.com/', 'https://www.facebook.com/orangebrutusofficialpage/', 'https://www.instagram.com/orangebrutusPH/'],
+      },
+      {
+        answers: ['Wingers Unlimited', 'Wingers'],
+        img: 'assets/images/1kananan/wingers.jpg',
+        description: 'Eat all you can unlimited chicken. Flavors: Major Barbeque, Sgt. Garlic Pepper, Colonel Sweet Mustard, Private Plain, John Doe',
+        socmed: ['', 'https://www.facebook.com/wingersunlimited/'],
+      },
+      {
+        answers: ['Rico\'s Lechon', 'Ricos Lechon'],
+        img: 'assets/images/1kananan/rico.jpg',
+        description: 'Rico\’s Lechon is Crispy, Juicy and Flavorful! These three words best describe the flavor of the world-renowned roasted pig variety that’s popular in the Philippines.Covered with perfectly crispy skin, it can stand on its own without “sawsawan” as the juicy meat has been basked in a flavorful assortment of organic ingredients. It also comes in two flavors: original and spicy. Rico’s Lechon provides an experience like “home” with its contemporary classic interiors that shows “Old Cebu with a twist. We also house a Lechon Fulfillment Center for whole lechon orders and take out counter pasalubong. ',
+        socmed: ['https://ricoslechon.com/', 'https://www.facebook.com/RicosLechonOfficial/', 'https://www.instagram.com/ricoslechonofficial/?hl=en'],
+      },
+      {
+        answers: ['Persian Palate'],
+        img: 'assets/images/1kananan/persian.png',
+        description: 'Persian Palate is a restaurant in Cebu City that serves Mediterrean, Middle Eastern, and Indian cuisine. More than half of our menu is vegetarian with some being vegan friendly. Our Unli Veggie Buffet is every Friday and Saturday from 4PM to 8PM',
+        socmed: ['https://persianpalate.ph/', 'https://www.facebook.com/PersianPalatePH/'],
+      },
+      {
+        answers: ['Choobi Choobi', 'Choobi'],
+        img: 'assets/images/1kananan/choobi.jpg',
+        description: 'Choobi Choobi is a family oriented casual dining restaurant. Despite it\’s Korean sounding name, Choobi Choobi\’s menu courses are mostly Filipino Comfort Food. Choobi Choobi is derived from a Fookien word which means “to enjoy” that’s how our tag line “Lingaw lingaw Kaon!” originated. We grow our own shrimps that\’s why we have the freshest yet, cheapest shrimps in town. From our first branch in Parkmall Cebu which opened July, 2013; we have grown by the grace of God. To 16 branches located in key cities such as Bacolod, Iloilo, Cagayan de Oro, Davao and Metro Manila. We are still continuing to grow.',
+        socmed: ['https://www.choobichoobi.com/', 'https://www.facebook.com/ChoobiChoobi/'],
+      },
+      {
+        answers: ['Kuya J'],
+        img: 'assets/images/1kananan/kuyaj.jpg',
+        description: 'Kuya J Restaurant, formerly known as “Ang Kan-anan ni Kuya J,” started as a humble eatery along the streets of Cebu. But with Kuya J\’s undeniably delicious dishes, mouthwatering words of recommendation quickly spread into every Cebuanos’ palate. With that, Kuya J instantly became one of the well-loved restaurants in Cebu. Today, Kuya J continues to satisfy every Filipino\’s appetite nationwide. Using only the freshest ingredients available, Kuya J cooks up a storm of delicious Pinoy food in every corner of the Philippines.',
+        socmed: ['https://www.kuyaj.ph/', 'https://www.facebook.com/KuyaJResto/', 'https://www.instagram.com/kuyajresto/?hl=en'],
+      },
+      {
+        answers: ['Ila Puti'],
+        img: 'assets/images/1kananan/ila.jpg',
+        description: 'Ilaputi ~ Asian Soul FoodThis is our take on Asian comfort food. All your favorite dishes like you\’ve never seen before. Our menu is familiar yet entirely new, simple but full of surprises with huge portions and unique flavors. Each dish is made from scratch using only the best ingredients in the market. Local flavors, sauces and spices creatively combined to make a perfect meal.Not just good eats but a culinary adventure that will definitely be unforgettable. But don\’t take our word for it. Experience ilaputi for yourself.Drop by, chill out, drink up, have a taste and enjoy. Everyone\’s invited.',
+        socmed: ['http://www.ilaputi.com/', 'https://www.facebook.com/ilaputi', 'https://www.instagram.com/ilaputi/?hl=en', 'https://twitter.com/ilaputi'],
+      },
+      {
+        answers: ['Sprocketeer Cafe', 'Sprocketeer', 'Sprockets'],
+        img: 'assets/images/1kananan/sprock.jpg',
+        description: 'Sprockets Cafe is envisioned to become the creative hub for artists, photographers, writers, imaginative young people, innovative young professionals and entrepreneurs, a third venue (the first two being the home and the office) to chill and unwind. It will provide customers that ‘breathe of fresh air’, a place to breed creativity and inspiration.Sprockets Café encourages youthful freedom and boundless imagination. It offers milk tea, coffee and great comfort food.',
+        socmed: ['', 'https://www.facebook.com/sprocketeercafe/', 'https://www.instagram.com/sprocketeercafe/?hl=en'],
+      },
+      {
+        answers: ['Ultimate Sandwich Station', 'USS'],
+        img: 'assets/images/1kananan/uss.jpg',
+        description: 'Not your ordinary sandwich.',
+        socmed: ['https://ultimatesandwichstation.business.site/', 'https://www.facebook.com/ultimatesandwichstation/', 'https://www.instagram.com/ultimatesandwichstation/'],
       },
     ]
     },
@@ -101,13 +173,26 @@ export class HomePage {
         description: 'test2'
       },
     ]
+    },
+    {
+      logosId: 3,
+      title: 'Tara Bukid',
+      logo: [
+      {
+        answers: 'USC',
+        img: 'assets/images/1kananan/10dc.png',
+        description: 'test2'
+      },
+      {
+        answers: 'CIC',
+        img: 'assets/images/1kananan/samyupsalamat.jpg',
+        description: 'test2'
+      },
+    ]
     }
   ];
 
-  constructor(private storage: StorageService) {
-    this.populateStorage();
-  }
-
+  constructor(private storage: StorageService, private router: Router) {}
 
   populateStorage() {
     this.loadLevelsData();
@@ -145,8 +230,8 @@ export class HomePage {
     });
   }
 
-  // async removeItem(index) {
-  //   this.storage.removeItem(index);
-  //   this.listdata.splice(index,1);
-  // }
+  async navigateToSelectLevel() {
+    await this.populateStorage();
+    this.router.navigateByUrl('/select-level');
+  }
 }

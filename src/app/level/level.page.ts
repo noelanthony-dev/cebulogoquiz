@@ -22,7 +22,6 @@ export class LevelPage implements OnInit {
   ngOnInit() {
     this.levelId = +this.route.snapshot.paramMap.get('id');
     this.loadLogosData();
-    console.log('levelId', this.levelId);
   }
 
   /** loadLogosData */
@@ -32,7 +31,6 @@ export class LevelPage implements OnInit {
         if (res) {
         this.logoSet = res[0];
         this.logoSet = this.logoSet.find(i => i.logosId === this.levelId);
-        console.log('logoset', this.logoSet);
       }
     });
   }
@@ -43,12 +41,17 @@ export class LevelPage implements OnInit {
     this.storage.getData('progress').subscribe(res => {
       if (res) {
         this.progress = res[0];
-        console.log('prores', this.progress);
       }
     });
   }
 
   ionViewWillEnter() {
     this.loadProgressData();
+  }
+
+  /* helper class */
+  /* used to supress console error */
+  typeOf(value) {
+    return typeof value;
   }
 }
