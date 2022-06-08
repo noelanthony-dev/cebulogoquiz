@@ -37,10 +37,8 @@ export class LogoPage implements OnInit {
   }
 
   onChangeInput() {
-    // console.log('thisinoput',this.input);
-    // console.log('.logo.name',this.logo.answers);
     this.logo.answers.forEach(logoName => {
-      if (this.input.toLowerCase() === logoName.toLowerCase()) {
+      if (this.input.toLowerCase().trim() === logoName.toLowerCase()) {
         this.status = true;
         this.presentToast();
         this.logo.status = true;
@@ -55,7 +53,6 @@ export class LogoPage implements OnInit {
     this.storage.getData('logos').subscribe(res => {
       if (res) {
       this.logo = res[0].find(i => i.logosId === this.levelId).logo[this.logoId];
-      console.log('logo',this.logo)
     }
     });
   }

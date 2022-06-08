@@ -16,6 +16,7 @@ ion-header{
   z-index: 99;
   bottom: 40%;
   color: rgb(83, 204, 43);
+  pointer-events: none; // so icon can be clicked and logo will load
 }
 
 .reduced-opacity {

@@ -18,14 +18,9 @@ export class HomePage {
     },
     {
       id: 2,
-      title: 'Skwelahan',
-      color: 'peach'
-    },
-    {
-      id: 3,
       title: 'Tara Bukid!',
       color: 'peach'
-    }
+    },
   ];
 
   progress =
@@ -43,13 +38,18 @@ export class HomePage {
       { status: false }, // 10 persian
       { status: false }, // 11 choobi
       { status: false }, // 12 kuyaj
-      { status: false }, // 12 ila
-      { status: false }, // 13 sprokceteer
-      { status: false }, // 13 uss
+      { status: false }, // 13 ila
+      { status: false }, // 14 dong
+      { status: false }, // 15 uss
     ],
     [
-      { status: false }, // usc
-      { status: false }, // cic
+      { status: false }, // 1 charlie
+      { status: false }, // 2 lavie
+      { status: false }, // 3 21
+      { status: false }, // 4 gas
+      { status: false }, // 5 soul
+      { status: false }, // 6 lake
+      { status: false }, // 7 lake
     ]
   ];
 
@@ -60,7 +60,7 @@ export class HomePage {
     title: 'Kan-anan',
     logo: [
       {
-        answers: ['10 Dove Street', 'Dove Street'],
+        answers: ['10 Dove Street', 'Dove Street', 'Ten Dove Street'],
         img: 'assets/images/1kananan/10dc.png',
         description: '10 Dove Street is a cozy cafe that serves comfort food and delectable baked goodies.' +
         'Mrs. Marisol Verallo started her love for baking after her marriage to Lee in the year 1973 in his hometown in Bogo, Cebu.' +
@@ -115,7 +115,7 @@ export class HomePage {
         socmed: ['', 'https://www.facebook.com/wingersunlimited/'],
       },
       {
-        answers: ['Rico\'s Lechon', 'Ricos Lechon'],
+        answers: ['Rico\'s Lechon', 'Ricos Lechon', 'Ricos', 'Rico\'s'],
         img: 'assets/images/1kananan/rico.jpg',
         description: 'Rico\’s Lechon is Crispy, Juicy and Flavorful! These three words best describe the flavor of the world-renowned roasted pig variety that’s popular in the Philippines.Covered with perfectly crispy skin, it can stand on its own without “sawsawan” as the juicy meat has been basked in a flavorful assortment of organic ingredients. It also comes in two flavors: original and spicy. Rico’s Lechon provides an experience like “home” with its contemporary classic interiors that shows “Old Cebu with a twist. We also house a Lechon Fulfillment Center for whole lechon orders and take out counter pasalubong. ',
         socmed: ['https://ricoslechon.com/', 'https://www.facebook.com/RicosLechonOfficial/', 'https://www.instagram.com/ricoslechonofficial/?hl=en'],
@@ -124,7 +124,7 @@ export class HomePage {
         answers: ['Persian Palate'],
         img: 'assets/images/1kananan/persian.png',
         description: 'Persian Palate is a restaurant in Cebu City that serves Mediterrean, Middle Eastern, and Indian cuisine. More than half of our menu is vegetarian with some being vegan friendly. Our Unli Veggie Buffet is every Friday and Saturday from 4PM to 8PM',
-        socmed: ['https://persianpalate.ph/', 'https://www.facebook.com/PersianPalatePH/'],
+        socmed: ['https://persianpalate.ph/', 'https://www.facebook.com/PersianPalatePH/', 'https://www.instagram.com/persianpalate.ph/', 'https://twitter.com/persianpalateph'],
       },
       {
         answers: ['Choobi Choobi', 'Choobi'],
@@ -145,51 +145,67 @@ export class HomePage {
         socmed: ['http://www.ilaputi.com/', 'https://www.facebook.com/ilaputi', 'https://www.instagram.com/ilaputi/?hl=en', 'https://twitter.com/ilaputi'],
       },
       {
-        answers: ['Sprocketeer Cafe', 'Sprocketeer', 'Sprockets'],
-        img: 'assets/images/1kananan/sprock.jpg',
-        description: 'Sprockets Cafe is envisioned to become the creative hub for artists, photographers, writers, imaginative young people, innovative young professionals and entrepreneurs, a third venue (the first two being the home and the office) to chill and unwind. It will provide customers that ‘breathe of fresh air’, a place to breed creativity and inspiration.Sprockets Café encourages youthful freedom and boundless imagination. It offers milk tea, coffee and great comfort food.',
-        socmed: ['', 'https://www.facebook.com/sprocketeercafe/', 'https://www.instagram.com/sprocketeercafe/?hl=en'],
+        answers: ['Dong Juan'],
+        img: 'assets/images/1kananan/dong.png',
+        description: 'Established in 2007, DONG JUAN was developed with the Cebu Market in mind. Cebuanos being a penchant for good food, reasonable prices and adequate serving',
+        socmed: ['', 'https://www.facebook.com/dongjuanph/'],
       },
       {
-        answers: ['Ultimate Sandwich Station', 'USS'],
-        img: 'assets/images/1kananan/uss.jpg',
-        description: 'Not your ordinary sandwich.',
-        socmed: ['https://ultimatesandwichstation.business.site/', 'https://www.facebook.com/ultimatesandwichstation/', 'https://www.instagram.com/ultimatesandwichstation/'],
+        answers: ['Bo\'s Coffee', 'Bos', 'Bo\'s'],
+        img: 'assets/images/1kananan/bo.jpg',
+        description: 'We are homegrown. We put the spotlight on #PhilippineCoffee. Our Coffee Origins is a story of our culture. We make it our business to support local coffee farmers. We make it our mission to create a positive social impact by empowering social enterprises. It is at our pursuit to deliver unparalleled hospitality and a complete homegrown experience to our patrons. We are Bo\'s Coffee, #YourHomegrownBrew',
+        socmed: ['https://www.boscoffee.com/', 'https://www.facebook.com/boscoffee/', 'https://www.instagram.com/boscoffee/?hl=en', 'https://twitter.com/boscoffee'],
       },
     ]
     },
     {
       logosId: 2,
-      title: 'Skwelahan',
-      logo: [
-      {
-        answers: 'USC',
-        img: 'assets/images/1kananan/10dc.png',
-        description: 'test2'
-      },
-      {
-        answers: 'CIC',
-        img: 'assets/images/1kananan/samyupsalamat.jpg',
-        description: 'test2'
-      },
-    ]
-    },
-    {
-      logosId: 3,
       title: 'Tara Bukid',
       logo: [
       {
-        answers: 'USC',
-        img: 'assets/images/1kananan/10dc.png',
-        description: 'test2'
+        answers: ['Charlie\'s Cup', 'Charlies Cup'],
+        img: 'assets/images/2bukid/1charlie.jpg',
+        description: 'Baby Friendly • PWD friendly • Pet friendly • Parking space available • Serving Hot & Cold beverages, All-Day-Breakfast, Snacks and Sweet Desserts • NO ENTRANCE FEE',
+        socmed: ['', 'https://www.facebook.com/charliescupcebu/'],
       },
       {
-        answers: 'CIC',
-        img: 'assets/images/1kananan/samyupsalamat.jpg',
-        description: 'test2'
+        answers: ['La Vie in the Sky', 'La Vie'],
+        img: 'assets/images/2bukid/2lavie.jpg',
+        description: 'At La Vie Parisienne and La Vie in the Sky, we believe that a great dining experience is more than justgood food. We are devoted to giving our guests unique dining experience by serving only the finestselection of food and beverages and by providing them an awe-inspiring dining environment. Inspired by French bistros, our self-service restaurants offer a unique and personalized experience to our guests. This hallmark of ours provides guests the freedom to take their time and browse through our products with ease. We believe that a top-notch dining experience is one that is not only gastronomically satisfying but also engaging and fun.',
+        socmed: ['https://lavieparisienne.ph/la-vie-in-the-sky', 'https://www.facebook.com/Lavieinthesky/', 'https://www.instagram.com/lavieinthesky/?hl=en'],
+      },
+      {
+        answers: ['21 Kilometers Coffee', '21 km', '21 Kilometers'],
+        img: 'assets/images/2bukid/3km.jpg',
+        description: 'We are specialty coffee shop 25 Kilometers or 35 minutes away from city center of Cebu serving coffee and pastries with passion.',
+        socmed: ['https://21-kilometers-coffee.business.site/', 'https://www.facebook.com/21kilometerscoffee'],
+      },
+      {
+        answers: ['Gaslamp District'],
+        img: 'assets/images/2bukid/4gas.jpg',
+        description: 'Gaslamp District - the newest mountainside food haven, is essentially a food park/biker’s pitstop. It will also be another home for local food trucks and restaurants, and a new elevated family destination to make memories in.',
+        socmed: ['https://gaslamp-district-busay.business.site/?m=true', 'https://www.facebook.com/gaslampdistrictbusay', 'https://www.instagram.com/gaslampdistrictbusay/'],
+      },
+      {
+        answers: ['Soul Sierra'],
+        img: 'assets/images/2bukid/5soul.png',
+        description: 'Mindful Eats at The Garden Restaurant, Wholesome Activities, Wellness & Creativity, Earth Focused.',
+        socmed: ['https://www.eventbrite.com/o/soul-sierra-23450214428?fbclid=IwAR3bkenkkYJMURvtUBKo1NtVxOY6lEtJQ5bq41RyKWNWPkkbW-Iou63ikBk', 'https://www.facebook.com/soulsierra', 'https://www.instagram.com/soulsierra/'],
+      },
+      {
+        answers: ['Lakeview Le Jardin', 'Lakeview'],
+        img: 'assets/images/2bukid/6lake.jpg',
+        description: 'Garden-Restaurant-Cafe situated in km 30, TCH',
+        socmed: ['', 'https://www.facebook.com/lakeviewlejardincebu', 'https://www.instagram.com/lakeviewlejardin/?hl=en'],
+      },
+      {
+        answers: ['Top of Cebu', 'Top'],
+        img: 'assets/images/2bukid/7tops.png',
+        description: '',
+        socmed: ['', 'https://www.facebook.com/topofcebu/'],
       },
     ]
-    }
+    },
   ];
 
   constructor(private storage: StorageService, private router: Router) {}
@@ -235,3 +251,23 @@ export class HomePage {
     this.router.navigateByUrl('/select-level');
   }
 }
+
+
+/*
+NOTES: When adding a logo, add a line in progress and in logos
+to be put in later
+hardmode kan-anan
+{
+        answers: ['Sprocketeer Cafe', 'Sprocketeer', 'Sprockets'],
+        img: 'assets/images/1kananan/sprock.jpg',
+        description: 'Sprockets Cafe is envisioned to become the creative hub for artists, photographers, writers, imaginative young people, innovative young professionals and entrepreneurs, a third venue (the first two being the home and the office) to chill and unwind. It will provide customers that ‘breathe of fresh air’, a place to breed creativity and inspiration.Sprockets Café encourages youthful freedom and boundless imagination. It offers milk tea, coffee and great comfort food.',
+        socmed: ['', 'https://www.facebook.com/sprocketeercafe/', 'https://www.instagram.com/sprocketeercafe/?hl=en'],
+      },
+      {
+        answers: ['Ultimate Sandwich Station', 'USS'],
+        img: 'assets/images/1kananan/uss.jpg',
+        description: 'Not your ordinary sandwich.',
+        socmed: ['https://ultimatesandwichstation.business.site/', 'https://www.facebook.com/ultimatesandwichstation/', 'https://www.instagram.com/ultimatesandwichstation/'],
+      },
+
+*/

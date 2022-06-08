@@ -59,8 +59,9 @@ export class SelectLevelPage implements OnInit {
 
   /* percentageProgress(a , b) */
   /* converts number of completed logos and total logos to percentage */
+  /* no decimal points as it looks ugly */
   percentageProgress(index: number): number{
-    return this.levelProgress(index) / this.progress[index].length * 100;
+    return Math.trunc(this.levelProgress(index) / this.progress[index].length * 100);
   }
 
   totalLevels(index: number): number {
