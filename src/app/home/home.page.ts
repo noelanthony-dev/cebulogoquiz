@@ -50,6 +50,14 @@ export class HomePage {
       { status: false }, // 5 soul
       { status: false }, // 6 lake
       { status: false }, // 7 lake
+      { status: false }, // 8 flor
+      { status: false }, // 9 mountainview
+      { status: false }, // 10 sachiko
+      { status: false }, // 11 servo
+      { status: false }, // 12 nomad
+      { status: false }, // 13 west 35
+      { status: false }, // 14 lava
+      { status: false }, // 14 balay
     ]
   ];
 
@@ -62,20 +70,13 @@ export class HomePage {
       {
         answers: ['10 Dove Street', 'Dove Street', 'Ten Dove Street'],
         img: 'assets/images/1kananan/10dc.png',
-        description: '10 Dove Street is a cozy cafe that serves comfort food and delectable baked goodies.' +
-        'Mrs. Marisol Verallo started her love for baking after her marriage to Lee in the year 1973 in his hometown in Bogo, Cebu.' +
-        'From there, she started selling to friends and relatives her delectable cakes and pastries which was known for using only quality ingredients.' +
-        'Soon after, the young couple moved to Cebu City where Marisol\’s home-baked goods became an instant hit with the Cebuanos.' +
-        'Encouraged by her family, Marisol decided to open a quaint cake tucked in a small portion of her home in Sto. Niño Village.' +
-        'Aptly naming it 10 Dove Street, after her home address, the cafe became known for its affordable and hearty meals, personalized service and cozy ambiance.' +
-        'Through word of mouth, the popularity of 10 Dove Street grew and people would line up for a taste of her home crafted meals and made-to-order cakes and pastries.' +
-        'And on 2014, 10 Dove Street decided to move to a new home in order to open its doors to more people,\n while ensuring to maintain the traditions that Mrs. Marisol Verallo has created a combination of cozy ambiance, good food, and a perfect slice of heaven.',
+        description: '10 Dove Street is a cozy cafe that serves comfort food and delectable baked goodies.',
         socmed: ['https://www.10dovestreet.com/', 'https://www.facebook.com/ten.dove.street', 'https://www.instagram.com/tendovestreet/', ''],
       },
       {
         answers: ['Sol\'s', 'Sols'],
         img: 'assets/images/1kananan/sols.jpg',
-        description: 'Sol\’s Halo-Halo and Desserts is owned by entrepreneur Cathy Uy and her partner. The name itself originates from Ms. Cathy’s mom name Soledad whom she said has a great passion for cooking and making desserts. The business started on July 20, 2016, in Barangay Tisa, Cebu City. It soon clicked to Cebuanos\’ palettes that they opened its first branch at G/F Skyrise 1 IT Park on March 30, 2017. An interested entrepreneur contracted them for a franchise at Sign in Restobar in Carcar City which opened last July 7, 2017. They mainly serve halo-halo then added with desserts like leche flan, macaroons, puto cheese, buko pandan, custard cake, maja blanca, and broken glass. Different beverages are also being sold.',
+        description: 'Sol\’s Halo-Halo and Desserts is owned by entrepreneur Cathy Uy and her partner. The name itself originates from Ms. Cathy’s mom name Soledad whom she said has a great passion for cooking and making desserts. The business started on July 20, 2016, in Barangay Tisa, Cebu City. They mainly serve halo-halo then added with desserts like leche flan, macaroons, puto cheese, buko pandan, custard cake, maja blanca, and broken glass. Different beverages are also being sold.',
         socmed: ['', 'https://www.facebook.com/SolmateOfficial'],
       },
       {
@@ -87,7 +88,7 @@ export class HomePage {
       {
         answers: ['Cooee'],
         img: 'assets/images/1kananan/coe.jpg',
-        description: 'Your favorite everyday bake, brew, blend and juice ritual • We are open daily from 8AM to 10PM',
+        description: 'Your favorite everyday bake, brew, blend and juice ritual',
         socmed: ['', 'https://www.facebook.com/cooeeph/', 'https://www.instagram.com/cooeeph/?hl=en'],
       },
       {
@@ -203,6 +204,54 @@ export class HomePage {
         img: 'assets/images/2bukid/7tops.png',
         description: '',
         socmed: ['', 'https://www.facebook.com/topofcebu/'],
+      },
+      {
+        answers: ['Florentino\'s Art Space'],
+        img: 'assets/images/2bukid/8flor.png',
+        description: 'Florentino’s Art Space is a local art hub. It is an avenue for visual arts in Cebu, a place where you can create, exhibit and explore art. It is comprised of an art gallery, outdoor garden museum, paint studio and a café. ',
+        socmed: ['', 'https://www.facebook.com/FlorentinosArtSpace'],
+      },
+      {
+        answers: ['Mountain View Nature\'s Park', 'Mountain View'],
+        img: 'assets/images/2bukid/9mview.jpg',
+        description: '',
+        socmed: ['', 'https://www.facebook.com/MountainViewNaturesPark/', 'https://www.instagram.com/mt.viewnaturespark/'],
+      },
+      {
+        answers: ['Sachiko\'s Little Kyoto', 'Sachikos Little Kyoto'],
+        img: 'assets/images/2bukid/10sachiko.png',
+        description: '',
+        socmed: ['', 'https://www.facebook.com/sachikoslittlekyoto/'],
+      },
+      {
+        answers: ['Outback Servo'],
+        img: 'assets/images/2bukid/11servo.png',
+        description: ' ',
+        socmed: ['', 'https://www.facebook.com/OutbackServo/', 'https://www.instagram.com/outbackservo/'],
+      },
+      {
+        answers: ['Nomad\'s Refuge','Nomads Refuge'],
+        img: 'assets/images/2bukid/12nomad.jpg',
+        description: 'Nomad\'s Refuge is a restaurant in the beautiful mountain area called Cantipla in Cebu City. Dedicated to providing delicious food with a beautiful view, Nomad\'s also sources what it can from local cantipla farmers.',
+        socmed: ['', 'https://www.facebook.com/nomadsrefuge', 'https://www.instagram.com/nomadsrefuge/'],
+      },
+      {
+        answers: ['West 35 Eco Mountain Resort', 'West 35'],
+        img: 'assets/images/2bukid/13west.png',
+        description: 'WEST 35 is an Eco Mountain Resort that aims to help in preserving and sustaining the diversity of the world’s natural environments. It boasts of lush vegetation, a wide variety of insects, birds and foliage endemic.',
+        socmed: ['', 'https://www.facebook.com/West35EcoMountain', 'https://www.instagram.com/west35ecomountainresort/'],
+      },
+      {
+        answers: ['Lava Mountain River Farm'],
+        img: 'assets/images/2bukid/14lava.png',
+        description: 'A 4-hectare agri-tourism farm and private villas located beside the Mananga River in the valley of the mountains of Brgy. Bonbon in Cebu City.',
+        socmed: ['https://www.lavamountainriverfarm.com/', 'https://www.facebook.com/LavaMountainRiverFarm/'],
+      },
+      {
+        answers: ['Balay Sa Busay'],
+        img: 'assets/images/2bukid/15balay.jpg',
+        description: 'Find us at Cebu Tops Road in Brgy. Busay, Cebu City.',
+        socmed: ['https://linkin.bio/balaysabusay', 'https://www.facebook.com/BalaySaBusay/', 'https://www.instagram.com/balaysabusay/'],
       },
     ]
     },
