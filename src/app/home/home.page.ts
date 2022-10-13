@@ -24,7 +24,7 @@ export class HomePage {
     {
       id: 3,
       title: 'Business Centers',
-      color: 'peach'
+      color: 'nude'
     },
   ];
 
