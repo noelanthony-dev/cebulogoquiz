@@ -361,13 +361,13 @@ export class HomePage {
       },
       {
         answers: ['Vibo Place / Axis Entertainment Avenue', 'Vibo', 'Axis'],
-        img: 'assets/images/3park/14vibo.jpg',
+        img: 'assets/images/3park/14vibo.png',
         description: 'your uptown destination for a variety of delicious dining options',
         socmed: ['https://viboplace.com/', 'https://www.facebook.com/ViboPlace', 'https://www.instagram.com/axisentertainmentavenue/'],
       },
       {
         answers: ['Taft East Gate', 'Taft'],
-        img: 'assets/images/3park/15taft.jpg',
+        img: 'assets/images/3park/15taft.png',
         description: 'All that is essential to a comfortable and sustainable lifestyle in one desirable address. ______\’ vision is executed through its signature MicroTownship concept, the standard which ensures that ______\'s projects are placed only on transit-oriented and strategic locations. This is perfectly captured in ______, where key points in the community are literally just a few steps away from each other. Saved from the hassles of commuting or waiting, you could be beating the daily grind one minute, and having a ball the next.',
         socmed: ['https://www.taftproperties.com.ph/project/east-gate/', 'https://www.facebook.com/tafteastgatebytaft/about'],
       },
