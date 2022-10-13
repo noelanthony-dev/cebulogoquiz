@@ -279,7 +279,7 @@ export class HomePage {
     },
     {
       logosId: 3,
-      title: 'Food park man siguro',
+      title: 'Business Centers',
       logo: [
       {
         answers: ['Oakridge Business Park', 'Oakridge'],
