@@ -21,6 +21,11 @@ export class HomePage {
       title: 'Tara Bukid!',
       color: 'peach'
     },
+    {
+      id: 3,
+      title: 'Business Centers',
+      color: 'peach'
+    },
   ];
 
   progress =
@@ -58,7 +63,24 @@ export class HomePage {
       { status: false }, // 13 west 35
       { status: false }, // 14 lava
       { status: false }, // 14 balay
-    ]
+    ],
+    [
+      { status: false }, // 1 charlie
+      { status: false }, // 2 lavie
+      { status: false }, // 3 21
+      { status: false }, // 4 gas
+      { status: false }, // 5 soul
+      { status: false }, // 6 lake
+      { status: false }, // 7 lake
+      { status: false }, // 8 flor
+      { status: false }, // 9 mountainview
+      { status: false }, // 10 sachiko
+      { status: false }, // 11 servo
+      { status: false }, // 12 nomad
+      { status: false }, // 13 west 35
+      { status: false }, // 14 lava
+      { status: false }, // 14 balay
+    ],
   ];
 
   /** socmed format [ 0- store website, 1 - fb , 2 - instagram , 3- twitter]*/
@@ -252,6 +274,90 @@ export class HomePage {
         img: 'assets/images/2bukid/15balay.jpg',
         description: 'Find us at Cebu Tops Road in Brgy. Busay, Cebu City.',
         socmed: ['https://linkin.bio/balaysabusay', 'https://www.facebook.com/BalaySaBusay/', 'https://www.instagram.com/balaysabusay/'],
+      },
+    ]
+    },
+    {
+      logosId: 3,
+      title: 'Food park man siguro',
+      logo: [
+      {
+        answers: ['Oakridge Business Park', 'Oakridge'],
+        img: 'assets/images/3park/1oak.jpg',
+        description: 'Cebu\'s most exclusive business address with a stylish mix of event, lifestyle and office spaces. Nestled in one of Cebu\'s upscale districts is a hidden gem where business meets pleasure, where landscaping progresses a norm, where businesses grow. Oakridge Business Park is ideally located at the heart of A.S. Fortuna Street in Banilad, a main gateway that connects Cebu City and Mandaue City.',
+        socmed: ['https://www.oakridge.com.ph/', 'https://www.facebook.com/OakridgeBusinessPark', 'https://www.instagram.com/oakridgebusinesspark_official/'],
+      },
+      {
+        answers: ['Banilad Town Centre', 'Banilad Town Center', 'BTC'],
+        img: 'assets/images/3park/2btc.jpg',
+        description: 'Banilad Town Centre is a bike- and pet- friendly zone, one of the very few in Cebu. Enjoy the BTC style of living with a variety of shopping and dining options along the lifestyle strip to cater to your every need and whim. Banilad Town Centre is located along Gov. Cuenco Ave. and is open daily.',
+        socmed: ['', 'https://www.facebook.com/btccebu', 'https://www.instagram.com/btccebu/', 'https://twitter.com/btccebu'],
+      },
+      {
+        answers: ['The Greenery', 'Greenery'],
+        img: 'assets/images/3park/3green.jpg',
+        description: 'The Greneery Cebu is a commercial building located at The Greenery Building, Pope John Paul II Ave., Kasambagan, Cebu City',
+        socmed: ['', 'https://www.facebook.com/thegreenerycebuofficial'],
+      },
+      {
+        answers: ['IL Corso'],
+        img: 'assets/images/3park/4ilc.jpg',
+        description: 'IL Corso is the Lifemall of Filinvest in Cebu. A redefined lifestyle destination for conventional shopping and specialty dining with the panoramic view of the sea and open spaces.',
+        socmed: ['', 'https://www.facebook.com/ILCorsoFilinvestLifemalls'],
+      },
+      {
+        answers: ['Sugbo Mercado'],
+        img: 'assets/images/3park/5sugbomercado.jpg',
+        description: 'Sugb Mercado is a venue for startup food entrepreneurs to incubate their food ideas while being guided through guidelines to become full blown entrepreneurs to realize their vision in becoming a brand. Thorugh the years we have been a food destination for locals and tourists as a showcase to the Cebuano food culture. We aim to uplift not only the food industry but the entrepreneurial spirit of the Cebuanos.',
+        socmed: ['http://www.sugbomercado.com/', 'https://www.facebook.com/SugboMercado', 'https://www.instagram.com/sugbomercado/', 'https://twitter.com/sugbomercado'],
+      },
+      {
+        answers: ['88th Avenue'],
+        img: 'assets/images/3park/688.jpg',
+        description: '88th Avenue, Cebu’s first true luxury lifestyle development. Rising in the heart of the city, we set our self apart from the many other developments with our unique concept of elevated upscale living, combining both residential and commercial space.',
+        socmed: ['', 'https://www.facebook.com/88thavenuecebu'],
+      },
+      {
+        answers: ['The Gallery'],
+        img: 'assets/images/3park/7gal.png',
+        description: '88th Avenue, Cebu’s first true luxury lifestyle development. Rising in the heart of the city, we set our self apart from the many other developments with our unique concept of elevated upscale living, combining both residential and commercial space.',
+        socmed: ['', 'https://www.facebook.com/88thavenuecebu'],
+      },
+      {
+        answers: ['Streetscape'],
+        img: 'assets/images/3park/8street.png',
+        description: 'A new lifestyle destination in Banilad, offering first-in-Cebu stores, restaurants, Gym and services.',
+        socmed: ['https://streetscape.com.ph/', 'https://www.facebook.com/streetscapecebu/', 'https://www.instagram.com/streetscapecebu/'],
+      },
+      {
+        answers: ['Mahogany Place'],
+        img: 'assets/images/3park/9mahogany.png',
+        description: '',
+        socmed: ['', 'https://www.facebook.com/mahoganyplacecebu'],
+      },
+      {
+        answers: ['YelloCube Food Hub', 'YelloCube', 'Yello Cube'],
+        img: 'assets/images/3park/10yello.jpg',
+        description: 'Yello Cube is a food park that\'s going to be the first and finest gallery for food innovators and enthusiasts in Cebu City creating a wholesome and fairly priced and ethnically diverse food options to the public. ',
+        socmed: ['', 'https://www.facebook.com/YelloCubeCebu', 'https://www.instagram.com/yellocubeph/?hl=en'],
+      },
+      {
+        answers: ['Cebu I.T. Park', 'IT Park', 'Cebu Business Park'],
+        img: 'assets/images/3park/11it.jpg',
+        description: 'Cebu I.T. Park vibrantly rises over the former Lahug Airport, now one of the most prime areas in Cebu. A pioneer in Cebu’s I.T. industry, the integrated, mixed-use development obtained PEZA accreditation as an I.T. Park in 2000—the first in the Visayas and Mindanao. Today, this 27-hectare global gateway is home to a diverse mix of international and local software research and development companies, BPOs, and contact centers, which bring in millions of pesos in investments and employment to thousands of people.',
+        socmed: ['https://www.cebuitpark.com/', 'https://www.facebook.com/CebuITParkOfficial', 'https://www.instagram.com/cebuitpark/'],
+      },
+      {
+        answers: ['Grid'],
+        img: 'assets/images/3park/12grid.png',
+        description: 'Grid provide clean, safe and affordable homes for students and professionals. Offering a great environment for studying, relaxing, and socializing .',
+        socmed: ['', 'https://www.facebook.com/gridfoodpark'],
+      },
+      {
+        answers: ['Crossroads'],
+        img: 'assets/images/3park/13cross.jpg',
+        description: 'Crossroads is a lifestyle district where things come alive through community and collaboration. Featuring a unique selection of dining, retail and service establishments, Crossroads is a homegrown collective for the Cebuano community.',
+        socmed: ['https://crossroadscebu.com/', 'https://www.facebook.com/crossroadscebu', 'https://www.instagram.com/crossroadscebu/'],
       },
     ]
     },
