@@ -62,24 +62,24 @@ export class HomePage {
       { status: false }, // 12 nomad
       { status: false }, // 13 west 35
       { status: false }, // 14 lava
-      { status: false }, // 14 balay
+      { status: false }, // 15 balay
     ],
     [
-      { status: false }, // 1 charlie
-      { status: false }, // 2 lavie
-      { status: false }, // 3 21
-      { status: false }, // 4 gas
-      { status: false }, // 5 soul
-      { status: false }, // 6 lake
-      { status: false }, // 7 lake
-      { status: false }, // 8 flor
-      { status: false }, // 9 mountainview
-      { status: false }, // 10 sachiko
-      { status: false }, // 11 servo
-      { status: false }, // 12 nomad
-      { status: false }, // 13 west 35
-      { status: false }, // 14 lava
-      { status: false }, // 14 balay
+      { status: false }, // 1 Oakridge
+      { status: false }, // 2 btc
+      { status: false }, // 3 greenery
+      { status: false }, // 4 il corso
+      { status: false }, // 5 sugbo merc
+      { status: false }, // 6 88th
+      { status: false }, // 7 gallery
+      { status: false }, // 8 streetsc
+      { status: false }, // 9 mahogany
+      { status: false }, // 10 yellocube
+      { status: false }, // 11 itpark
+      { status: false }, // 12 grid
+      { status: false }, // 13 crossroads
+      { status: false }, // 14
+      { status: false }, // 15
     ],
   ];
 
@@ -358,6 +358,18 @@ export class HomePage {
         img: 'assets/images/3park/13cross.jpg',
         description: 'Crossroads is a lifestyle district where things come alive through community and collaboration. Featuring a unique selection of dining, retail and service establishments, Crossroads is a homegrown collective for the Cebuano community.',
         socmed: ['https://crossroadscebu.com/', 'https://www.facebook.com/crossroadscebu', 'https://www.instagram.com/crossroadscebu/'],
+      },
+      {
+        answers: ['Vibo Place / Axis Entertainment Avenue', 'Vibo', 'Axis'],
+        img: 'assets/images/3park/14vibo.jpg',
+        description: 'your uptown destination for a variety of delicious dining options',
+        socmed: ['https://viboplace.com/', 'https://www.facebook.com/ViboPlace', 'https://www.instagram.com/axisentertainmentavenue/'],
+      },
+      {
+        answers: ['Taft East Gate', 'Taft'],
+        img: 'assets/images/3park/15taft.jpg',
+        description: 'All that is essential to a comfortable and sustainable lifestyle in one desirable address. ______\’ vision is executed through its signature MicroTownship concept, the standard which ensures that ______\'s projects are placed only on transit-oriented and strategic locations. This is perfectly captured in ______, where key points in the community are literally just a few steps away from each other. Saved from the hassles of commuting or waiting, you could be beating the daily grind one minute, and having a ball the next.',
+        socmed: ['https://www.taftproperties.com.ph/project/east-gate/', 'https://www.facebook.com/tafteastgatebytaft/about'],
       },
     ]
     },
