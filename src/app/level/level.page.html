@@ -3,25 +3,23 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="select-level"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ logoSet.title }}</ion-title>
+    <ion-title *ngIf="logoSet">{{ logoSet.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row *ngIf="logoSet.logo[0]" class="ion-justify-content-center">
-      <ion-col size="3" class="ion-margin">
-        <ion-img [src]="logoSet.logo[0].img" ></ion-img>
-      </ion-col>
-
-      <ion-col size="3" class="ion-margin">
-        <ion-img [src]="logoSet.logo[1].img" ></ion-img>
-      </ion-col>
-
-      <ion-col size="3" class="ion-margin">
-        <ion-img [src]="logoSet.logo[2].img" ></ion-img>
+  <ion-grid *ngIf="logoSet">
+    <ion-row class="ion-justify-content-center" >
+      <ion-col size="3" class="ion-margin" *ngFor="let logo of logoSet.logo; let i = index">
+        <div [ngClass]="{'reduced-opacity': progress[levelId-1][i].status}">
+          <ion-img
+            [src]="logo.img"
+            [routerLink]="['/', 'logo', logoSet.logosId, i]"
+          >
+          </ion-img>
+          <ion-icon *ngIf="progress && progress[levelId-1][i].status" name="checkmark-circle" class="overlay"></ion-icon>
+        </div>
       </ion-col>
     </ion-row>
-
   </ion-grid>
 </ion-content>

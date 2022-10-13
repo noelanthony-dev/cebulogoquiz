@@ -1,10 +1,24 @@
 ion-header{
-  background-color: var(--ion-color-green);
+  background-color: #AA9183;
   text-align: center;
   min-height: 64px; // increase height of top bar
   padding-top: 6px; // so text will be centered
   ion-toolbar {
     color: white;
-    --background: var(--ion-color-green);
+    --background: #AA9183;
   }
+}
+
+.overlay {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  z-index: 99;
+  bottom: 40%;
+  color: rgb(83, 204, 43);
+  pointer-events: none; // so icon can be clicked and logo will load
+}
+
+.reduced-opacity {
+  opacity: 0.65;
 }

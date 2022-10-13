@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Level } from '../models/level.model';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-select-level',
@@ -7,24 +9,68 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectLevelPage implements OnInit {
 
-  levels: Array<any>;
+  levels: Level[];
+  progress: any;
 
-  constructor() { }
+  constructor(private storage: StorageService) {}
 
   ngOnInit() {
-    /* this.levels temporarily here . when webservice is available then get it from there*/
-    this.levels = [
-      {
-        id: 1,
-        title: 'Kan-anan',
-        color: 'green',
-      },
-      {
-        id: 2,
-        title: 'Skwelahan',
-        color: 'peach',
-      }
-    ];
+    this.loadProgressData();
   }
 
+  /** loadData */
+  /** loads data from IndexedDB */
+  async loadData() {
+    await this.storage.getData('levels').subscribe(res => {
+        if (res) {
+        this.levels = res[0];
+      }
+    });
+  }
+
+  /** loadProgressData */
+  /** loads progress data from IndexedDB */
+  loadProgressData() {
+    this.storage.getData('progress').subscribe(res => {
+      if (res) {
+        this.progress = res[0];
+      }
+    });
+  }
+
+  /* levelProgress(i) */
+  /* accepts the index of level as parameter */
+  /* returns the number of completed levels for the level */
+  levelProgress(index: number): number {
+    let counter = 0;
+    this.progress[index].forEach(element => {
+      if (element.status) {
+        counter++;
+      }
+    });
+    return counter;
+  }
+
+  /* data wont appear if loaddata() is in ngoninit */
+  ionViewWillEnter() {
+    this.loadData();
+    this.loadProgressData();
+  }
+
+  /* percentageProgress(a , b) */
+  /* converts number of completed logos and total logos to percentage */
+  /* no decimal points as it looks ugly */
+  percentageProgress(index: number): number{
+    return Math.trunc(this.levelProgress(index) / this.progress[index].length * 100);
+  }
+
+  totalLevels(index: number): number {
+    return this.progress[index].length;
+  }
+
+  /* helper class */
+  /* used to supress console error */
+  typeOf(value) {
+    return typeof value;
+  }
 }
