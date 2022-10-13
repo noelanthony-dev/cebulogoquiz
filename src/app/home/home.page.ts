@@ -78,8 +78,8 @@ export class HomePage {
       { status: false }, // 11 itpark
       { status: false }, // 12 grid
       { status: false }, // 13 crossroads
-      { status: false }, // 14
-      { status: false }, // 15
+      { status: false }, // 14 vibo
+      { status: false }, // 15 taft
     ],
   ];
 
