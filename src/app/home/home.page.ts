@@ -9,7 +9,7 @@ import { StorageService } from '../services/storage.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
   levels = [
     {
       id: 1,
@@ -414,8 +414,11 @@ export class HomePage {
   }
 
   async navigateToSelectLevel() {
-    await this.populateStorage();
     this.router.navigateByUrl('/select-level');
+  }
+
+  ngOnInit() {
+    this.populateStorage();
   }
 }
 

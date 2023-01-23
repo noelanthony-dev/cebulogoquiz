@@ -9,15 +9,18 @@
 
 <ion-content>
   <ion-grid *ngIf="logoSet">
-    <ion-row class="ion-justify-content-center" >
-      <ion-col size="3" class="ion-margin" *ngFor="let logo of logoSet.logo; let i = index">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4" *ngFor="let logo of logoSet.logo; let i = index" style="margin-bottom: 16px; margin-top:16px">
         <div [ngClass]="{'reduced-opacity': progress[levelId-1][i].status}">
           <ion-img
             [src]="logo.img"
             [routerLink]="['/', 'logo', logoSet.logosId, i]"
           >
           </ion-img>
-          <ion-icon *ngIf="progress && progress[levelId-1][i].status" name="checkmark-circle" class="overlay"></ion-icon>
+          <ion-icon
+            *ngIf="progress && progress[levelId-1][i].status"
+            name="checkmark-circle"
+            class="overlay"></ion-icon>
         </div>
       </ion-col>
     </ion-row>

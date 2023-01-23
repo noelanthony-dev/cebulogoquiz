@@ -27,25 +27,25 @@
     <p class="ion-margin description">{{ logo.description }}</p>
     <p class="ion-margin socialmedia" *ngIf="logo.socmed">Follow their social media pages:</p>
     <ion-grid fixed class="socialmedia" *ngIf="logo.socmed">
-      <ion-row>
-        <ion-col size="3" *ngIf="logo.socmed[0] && logo.socmed[0] !== ''">
+      <ion-row style="text-align: center" >
+        <ion-col size="6" *ngIf="logo.socmed[0] && logo.socmed[0] !== ''">
           <ion-chip outline color="primary" (click)="goToUrl(0)" >
           <ion-icon name="desktop-outline"></ion-icon>
           <ion-label>Website</ion-label>
         </ion-chip></ion-col>
-        <ion-col size="3" *ngIf="logo.socmed[1] && logo.socmed[1] !== ''">
+        <ion-col size="6" *ngIf="logo.socmed[1] && logo.socmed[1] !== ''">
           <ion-chip color="primary" (click)="goToUrl(1)" >
             <ion-icon name="logo-facebook"></ion-icon>
             <ion-label>Facebook</ion-label>
         </ion-chip>
         </ion-col>
-        <ion-col size="3" *ngIf="logo.socmed[2] && logo.socmed[2] !== ''">
+        <ion-col size="6" *ngIf="logo.socmed[2] && logo.socmed[2] !== ''">
           <ion-chip outline color="tertiary" (click)="goToUrl(2)">
             <ion-icon name="logo-instagram"></ion-icon>
             <ion-label>Instagram</ion-label>
         </ion-chip>
         </ion-col>
-        <ion-col size="3" *ngIf="logo.socmed[3] && logo.socmed[3] !== ''">
+        <ion-col size="6" *ngIf="logo.socmed[3] && logo.socmed[3] !== ''">
           <ion-chip outline color="secondary" (click)="goToUrl(2)">
             <ion-icon name="logo-twitter"></ion-icon>
             <ion-label>Twitter</ion-label>

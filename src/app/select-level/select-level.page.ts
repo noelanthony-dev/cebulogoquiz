@@ -22,6 +22,7 @@ export class SelectLevelPage implements OnInit {
   /** loads data from IndexedDB */
   async loadData() {
     await this.storage.getData('levels').subscribe(res => {
+      console.log('res',res);
         if (res) {
         this.levels = res[0];
       }
