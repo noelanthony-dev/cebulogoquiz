@@ -27,7 +27,7 @@
     <p class="ion-margin description">{{ logo.description }}</p>
     <p class="ion-margin socialmedia" *ngIf="logo.socmed">Follow their social media pages:</p>
     <ion-grid fixed class="socialmedia" *ngIf="logo.socmed">
-      <ion-row style="text-align: center" >
+      <ion-row>
         <ion-col size="6" *ngIf="logo.socmed[0] && logo.socmed[0] !== ''">
           <ion-chip outline color="primary" (click)="goToUrl(0)" >
           <ion-icon name="desktop-outline"></ion-icon>

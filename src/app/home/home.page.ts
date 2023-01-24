@@ -162,9 +162,9 @@ export class HomePage implements OnInit{
         socmed: ['https://www.kuyaj.ph/', 'https://www.facebook.com/KuyaJResto/', 'https://www.instagram.com/kuyajresto/?hl=en'],
       },
       {
-        answers: ['Ila Puti'],
+        answers: ['ilaputi'],
         img: 'assets/images/1kananan/ila.jpg',
-        description: 'Ilaputi ~ Asian Soul FoodThis is our take on Asian comfort food. All your favorite dishes like you\’ve never seen before. Our menu is familiar yet entirely new, simple but full of surprises with huge portions and unique flavors. Each dish is made from scratch using only the best ingredients in the market. Local flavors, sauces and spices creatively combined to make a perfect meal.Not just good eats but a culinary adventure that will definitely be unforgettable. But don\’t take our word for it. Experience ilaputi for yourself.Drop by, chill out, drink up, have a taste and enjoy. Everyone\’s invited.',
+        description: 'Ilaputi ~ Asian Soul Food. This is our take on Asian comfort food. All your favorite dishes like you\’ve never seen before. Our menu is familiar yet entirely new, simple but full of surprises with huge portions and unique flavors. Each dish is made from scratch using only the best ingredients in the market. Local flavors, sauces and spices creatively combined to make a perfect meal.Not just good eats but a culinary adventure that will definitely be unforgettable. But don\’t take our word for it. Experience ilaputi for yourself.Drop by, chill out, drink up, have a taste and enjoy. Everyone\’s invited.',
         socmed: ['http://www.ilaputi.com/', 'https://www.facebook.com/ilaputi', 'https://www.instagram.com/ilaputi/?hl=en', 'https://twitter.com/ilaputi'],
       },
       {
@@ -264,13 +264,13 @@ export class HomePage implements OnInit{
         socmed: ['', 'https://www.facebook.com/West35EcoMountain', 'https://www.instagram.com/west35ecomountainresort/'],
       },
       {
-        answers: ['Lava Mountain River Farm'],
+        answers: ['Lava Mountain River Farm', 'Lava'],
         img: 'assets/images/2bukid/14lava.png',
         description: 'A 4-hectare agri-tourism farm and private villas located beside the Mananga River in the valley of the mountains of Brgy. Bonbon in Cebu City.',
         socmed: ['https://www.lavamountainriverfarm.com/', 'https://www.facebook.com/LavaMountainRiverFarm/'],
       },
       {
-        answers: ['Balay Sa Busay'],
+        answers: ['Balay Sa Busay', 'balay'],
         img: 'assets/images/2bukid/15balay.jpg',
         description: 'Find us at Cebu Tops Road in Brgy. Busay, Cebu City.',
         socmed: ['https://linkin.bio/balaysabusay', 'https://www.facebook.com/BalaySaBusay/', 'https://www.instagram.com/balaysabusay/'],

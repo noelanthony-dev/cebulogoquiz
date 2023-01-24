@@ -5,9 +5,35 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <ion-button (click)="navigateToSelectLevel()"> <!-- [routerLink]="['/select-level']"-->
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Cebu Logo Quiz</ion-card-title>
+      <ion-card-subtitle>You are one of the few chosen to test the game! <br><br>
+        MISSION: The game aims to promote local and homegrown businesses by showing information in a fun and engaging way.<br>
+        VISION: More people to know more about what Cebu has to offer promoting local tourism and boost economy.<br><br>
+        The logos present in this game are businesses that started in Cebu.<br><br>
+        Please provide feedback and comments based on your experience playing the game. You may contact the developer through email noelanthony.dev@gmail.com or you may chat/text me <br><br>
+
+
+        Sample Questions:<br>
+        1. What Device you are using?<br>
+        2. Are you experiencing any lag?<br>
+        3. Which logos are too hard or too easy?<br>
+        4. Any problems encouintered while using the app?<br>
+        5. What features would you like to be implemented?<br>
+        6. Category and Logo Suggestions<br>
+        7. Comments/Feedbacks/Suggestions :)<br>
+
+        <br><br>Click the 'Play' button to start<br>
+        <ion-button size="large" (click)="navigateToSelectLevel()"> <!-- [routerLink]="['/select-level']"-->
+          Play
+        </ion-button>
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <!-- <div id="container">
+    <ion-button (click)="navigateToSelectLevel()"> <!-- [routerLink]="['/select-level']"
       Play
     </ion-button>
-  </div>
+  </div> -->
 </ion-content>
