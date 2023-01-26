@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { Logo } from '../models/logo.model';
@@ -10,6 +10,8 @@ import { StorageService } from '../services/storage.service';
   styleUrls: ['./logo.page.scss'],
 })
 export class LogoPage implements OnInit {
+
+  @ViewChild('inputField') answerInputField;
 
   logo: Logo;
   input: string;
@@ -28,8 +30,6 @@ export class LogoPage implements OnInit {
     this.logoId = +this.route.snapshot.paramMap.get('logoId');
     this.loadLogos();
   }
-
-
 
   onChangeInput() {
     this.logo.answers.forEach(logoName => {
@@ -73,4 +73,8 @@ export class LogoPage implements OnInit {
     window.open(this.logo.socmed[tag], '_blank');
   }
 
+  /* so that keyboard focuses on enter */
+  ionViewDidEnter() {
+    this.answerInputField.setFocus();
+  }
 }
