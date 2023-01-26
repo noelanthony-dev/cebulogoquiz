@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { Logo } from '../models/logo.model';
 import { StorageService } from '../services/storage.service';
@@ -11,6 +11,8 @@ import { StorageService } from '../services/storage.service';
 })
 export class LogoPage implements OnInit {
 
+  @ViewChild('inputField') answerInputField;
+
   logo: Logo;
   input: string;
   status: boolean;
@@ -21,6 +23,7 @@ export class LogoPage implements OnInit {
     private route: ActivatedRoute,
     private storage: StorageService,
     private toastController: ToastController,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -28,8 +31,6 @@ export class LogoPage implements OnInit {
     this.logoId = +this.route.snapshot.paramMap.get('logoId');
     this.loadLogos();
   }
-
-
 
   onChangeInput() {
     this.logo.answers.forEach(logoName => {
@@ -73,4 +74,19 @@ export class LogoPage implements OnInit {
     window.open(this.logo.socmed[tag], '_blank');
   }
 
+  /* so that keyboard focuses on enter */
+  ionViewDidEnter() {
+    if (this.answerInputField) {
+      this.answerInputField.setFocus();
+    }
+  }
+
+  /** this prevents going navigating to empty logo page */
+  navigateToNextLogo(type) {
+    const nextLogo = this.logoId + type;
+    if (nextLogo === -1 || nextLogo === 15) {
+      return;
+    }
+    this.router.navigateByUrl('/logo/' + this.levelId + '/' + nextLogo);
+  }
 }
