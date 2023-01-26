@@ -11,14 +11,14 @@
   <ion-grid *ngIf="logoSet">
     <ion-row class="ion-justify-content-center">
       <ion-col size="4" *ngFor="let logo of logoSet.logo; let i = index" style="margin-bottom: 16px; margin-top:16px">
-        <div [ngClass]="{'reduced-opacity': progress[levelId-1][i].status}">
+        <div [ngClass]="{'reduced-opacity': logo.progress}">
           <ion-img
             [src]="logo.img"
             [routerLink]="['/', 'logo', logoSet.logosId, i]"
           >
           </ion-img>
           <ion-icon
-            *ngIf="progress && progress[levelId-1][i].status"
+            *ngIf="logo && logo.progress"
             name="checkmark-circle"
             class="overlay"></ion-icon>
         </div>

@@ -11,7 +11,7 @@
     <ion-img [src]="logo.img" class="ion-margin"></ion-img>
 
     <ion-input
-      *ngIf="!status"
+      *ngIf="!logo.progress"
       type="text"
       inputmode="text"
       autofocus="true"
@@ -22,7 +22,7 @@
       >
     </ion-input>
 
-  <ion-text *ngIf="status === true">
+  <ion-text *ngIf="logo.progress === true">
     <h1 class="ion-text-center">{{ logo.answers[0] }}</h1>
     <p class="ion-margin description">{{ logo.description }}</p>
     <p class="ion-margin socialmedia" *ngIf="logo.socmed">Follow their social media pages:</p>

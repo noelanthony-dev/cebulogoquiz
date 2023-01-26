@@ -41,12 +41,12 @@ export class StorageService {
    }
 
    async updateProgress(levelId, logoId) {
-    const progress = await this.storage.get('progress') || [];
-    if (!progress || progress.length === 0) {
+    const logo = await this.storage.get('logos') || [];
+    if (!logo || logo.length === 0) {
       return null;
     }
-    progress[0][levelId-1][logoId].status = true;
+    logo[0][levelId-1].logo[logoId].progress = true;
 
-    return this.storage.set('progress', progress);
+    return this.storage.set('logos', logo);
    }
 }
