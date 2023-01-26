@@ -198,7 +198,7 @@ export class HomePage implements OnInit{
         socmed: ['https://lavieparisienne.ph/la-vie-in-the-sky', 'https://www.facebook.com/Lavieinthesky/', 'https://www.instagram.com/lavieinthesky/?hl=en'],
       },
       {
-        answers: ['21 Kilometers Coffee', '21 km', '21 Kilometers'],
+        answers: ['21 Kilometers Coffee', '21 km', '21 Kilometer'],
         img: 'assets/images/2bukid/3km.jpg',
         description: 'We are specialty coffee shop 25 Kilometers or 35 minutes away from city center of Cebu serving coffee and pastries with passion.',
         socmed: ['https://21-kilometers-coffee.business.site/', 'https://www.facebook.com/21kilometerscoffee'],
@@ -211,7 +211,7 @@ export class HomePage implements OnInit{
       },
       {
         answers: ['Soul Sierra'],
-        img: 'assets/images/2bukid/5soul.png',
+        img: 'assets/images/2bukid/5soul.jpg',
         description: 'Mindful Eats at The Garden Restaurant, Wholesome Activities, Wellness & Creativity, Earth Focused.',
         socmed: ['https://www.eventbrite.com/o/soul-sierra-23450214428?fbclid=IwAR3bkenkkYJMURvtUBKo1NtVxOY6lEtJQ5bq41RyKWNWPkkbW-Iou63ikBk', 'https://www.facebook.com/soulsierra', 'https://www.instagram.com/soulsierra/'],
       },
@@ -228,7 +228,7 @@ export class HomePage implements OnInit{
         socmed: ['', 'https://www.facebook.com/topofcebu/'],
       },
       {
-        answers: ['Florentino\'s Art Space'],
+        answers: ['Florentino\'s Art Space', 'Florentinos Art Space'],
         img: 'assets/images/2bukid/8flor.png',
         description: 'Florentino’s Art Space is a local art hub. It is an avenue for visual arts in Cebu, a place where you can create, exhibit and explore art. It is comprised of an art gallery, outdoor garden museum, paint studio and a café. ',
         socmed: ['', 'https://www.facebook.com/FlorentinosArtSpace'],
@@ -240,7 +240,7 @@ export class HomePage implements OnInit{
         socmed: ['', 'https://www.facebook.com/MountainViewNaturesPark/', 'https://www.instagram.com/mt.viewnaturespark/'],
       },
       {
-        answers: ['Sachiko\'s Little Kyoto', 'Sachikos Little Kyoto'],
+        answers: ['Sachiko\'s Little Kyoto', 'Sachikos Little Kyoto', 'Little Kyoto'],
         img: 'assets/images/2bukid/10sachiko.png',
         description: '',
         socmed: ['', 'https://www.facebook.com/sachikoslittlekyoto/'],
@@ -301,7 +301,7 @@ export class HomePage implements OnInit{
       },
       {
         answers: ['IL Corso'],
-        img: 'assets/images/3park/4ilc.jpg',
+        img: 'assets/images/3park/4ilc.png',
         description: 'IL Corso is the Lifemall of Filinvest in Cebu. A redefined lifestyle destination for conventional shopping and specialty dining with the panoramic view of the sea and open spaces.',
         socmed: ['', 'https://www.facebook.com/ILCorsoFilinvestLifemalls'],
       },
@@ -337,21 +337,21 @@ export class HomePage implements OnInit{
       },
       {
         answers: ['YelloCube Food Hub', 'YelloCube', 'Yello Cube'],
-        img: 'assets/images/3park/10yello.jpg',
+        img: 'assets/images/3park/10yello.png',
         description: 'Yello Cube is a food park that\'s going to be the first and finest gallery for food innovators and enthusiasts in Cebu City creating a wholesome and fairly priced and ethnically diverse food options to the public. ',
         socmed: ['', 'https://www.facebook.com/YelloCubeCebu', 'https://www.instagram.com/yellocubeph/?hl=en'],
       },
       {
-        answers: ['Cebu I.T. Park', 'IT Park', 'Cebu Business Park'],
+        answers: ['Cebu I.T. Park / Cebu Business Park', 'IT Park', 'Cebu Business Park'],
         img: 'assets/images/3park/11it.jpg',
         description: 'Cebu I.T. Park vibrantly rises over the former Lahug Airport, now one of the most prime areas in Cebu. A pioneer in Cebu’s I.T. industry, the integrated, mixed-use development obtained PEZA accreditation as an I.T. Park in 2000—the first in the Visayas and Mindanao. Today, this 27-hectare global gateway is home to a diverse mix of international and local software research and development companies, BPOs, and contact centers, which bring in millions of pesos in investments and employment to thousands of people.',
         socmed: ['https://www.cebuitpark.com/', 'https://www.facebook.com/CebuITParkOfficial', 'https://www.instagram.com/cebuitpark/'],
       },
       {
-        answers: ['Grid'],
-        img: 'assets/images/3park/12grid.png',
-        description: 'Grid provide clean, safe and affordable homes for students and professionals. Offering a great environment for studying, relaxing, and socializing .',
-        socmed: ['', 'https://www.facebook.com/gridfoodpark'],
+        answers: ['Paseo Arcenas'],
+        img: 'assets/images/3park/12paseo.png',
+        description: 'Great dining and lifestyle experiences, the Cebu City South way. Located in Banawa',
+        socmed: ['https://arcenasproperties.com/', 'https://www.facebook.com/paseoarcenasofficial'],
       },
       {
         answers: ['Crossroads'],
