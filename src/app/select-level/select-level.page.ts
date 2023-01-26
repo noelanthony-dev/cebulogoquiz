@@ -22,7 +22,6 @@ export class SelectLevelPage implements OnInit {
   /** loads data from IndexedDB */
   async loadData() {
     await this.storage.getData('levels').subscribe(res => {
-      console.log('res',res);
         if (res) {
         this.levels = res[0];
       }
@@ -32,7 +31,7 @@ export class SelectLevelPage implements OnInit {
   /** loadProgressData */
   /** loads progress data from IndexedDB */
   loadProgressData() {
-    this.storage.getData('progress').subscribe(res => {
+    this.storage.getData('logos').subscribe(res => {
       if (res) {
         this.progress = res[0];
       }
@@ -44,8 +43,8 @@ export class SelectLevelPage implements OnInit {
   /* returns the number of completed levels for the level */
   levelProgress(index: number): number {
     let counter = 0;
-    this.progress[index].forEach(element => {
-      if (element.status) {
+    this.progress[index].logo.forEach(element => {
+      if (element.progress) {
         counter++;
       }
     });
@@ -62,11 +61,11 @@ export class SelectLevelPage implements OnInit {
   /* converts number of completed logos and total logos to percentage */
   /* no decimal points as it looks ugly */
   percentageProgress(index: number): number{
-    return Math.trunc(this.levelProgress(index) / this.progress[index].length * 100);
+    return Math.trunc(this.levelProgress(index) / this.progress[index].logo.length * 100);
   }
 
   totalLevels(index: number): number {
-    return this.progress[index].length;
+    return this.progress[index].logo.length;
   }
 
   /* helper class */

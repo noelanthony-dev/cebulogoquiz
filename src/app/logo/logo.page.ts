@@ -26,22 +26,17 @@ export class LogoPage implements OnInit {
   ngOnInit() {
     this.levelId = +this.route.snapshot.paramMap.get('levelId');
     this.logoId = +this.route.snapshot.paramMap.get('logoId');
-    this.getProgressStatus();
     this.loadLogos();
   }
 
-  async getProgressStatus() {
-    await this.storage.getData('progress').subscribe(res => {
-      this.status = res[0][this.levelId-1][this.logoId].status;
-    });
-  }
+
 
   onChangeInput() {
     this.logo.answers.forEach(logoName => {
       if (this.input.toLowerCase().trim() === logoName.toLowerCase()) {
         this.status = true;
         this.presentToast();
-        this.logo.status = true;
+        this.logo.progress = true;
         this.storage.updateProgress(this.levelId, this.logoId);
       };
     });
@@ -52,8 +47,8 @@ export class LogoPage implements OnInit {
   loadLogos() {
     this.storage.getData('logos').subscribe(res => {
       if (res) {
-      this.logo = res[0].find(i => i.logosId === this.levelId).logo[this.logoId];
-    }
+        this.logo = res[0].find(i => i.logosId === this.levelId).logo[this.logoId];
+      }
     });
   }
 
