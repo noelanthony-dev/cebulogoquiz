@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { Logo } from '../models/logo.model';
 import { StorageService } from '../services/storage.service';
@@ -23,6 +23,7 @@ export class LogoPage implements OnInit {
     private route: ActivatedRoute,
     private storage: StorageService,
     private toastController: ToastController,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -75,6 +76,17 @@ export class LogoPage implements OnInit {
 
   /* so that keyboard focuses on enter */
   ionViewDidEnter() {
-    this.answerInputField.setFocus();
+    if (this.answerInputField) {
+      this.answerInputField.setFocus();
+    }
+  }
+
+  /** this prevents going navigating to empty logo page */
+  navigateToNextLogo(type) {
+    const nextLogo = this.logoId + type;
+    if (nextLogo === -1 || nextLogo === 15) {
+      return;
+    }
+    this.router.navigateByUrl('/logo/' + this.levelId + '/' + nextLogo);
   }
 }
